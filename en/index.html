@@ -61,14 +61,8 @@
   </div>
 </section>
 
-<div class="container">
-  <div class="facts">
-    <div><b>4</b><span class="lbl">Service areas</span></div>
-    <div><b>Rhino · Revit</b><span class="lbl">Built into your workflow</span></div>
-    <div class="wide"><b>CNC · Laser · 3D · Robot</b><span class="lbl">Machine-ready files</span></div>
-    <div><b>Python · C#</b><span class="lbl">Custom-built tools</span></div>
-  </div>
-</div>
+<!-- ENGAGEMENT: component, content in assets/js/components.js -->
+<brd-engagement lang="en" compact></brd-engagement>
 
 <!-- SERVICES -->
 <section class="block" id="services">
@@ -77,19 +71,24 @@
       <div><span class="eyebrow">Services</span><h2>Four areas, one model.</h2></div>
       <p>Each service can be hired on its own or combined. The parametric model built to analyse a design is the same one that later generates parts, drawings and quantities.</p>
     </div>
-
+    <div class="facts in-svcs">
+        <div><b>4</b><span class="lbl">Service areas</span></div>
+        <div><b>Rhino · Revit</b><span class="lbl">Built into your workflow</span></div>
+        <div><b>CNC · Laser</b><span class="lbl">Machine-ready files</span></div>
+        <div><b>Python · C#</b><span class="lbl">Custom-built tools</span></div>
+  </div>
     <div class="svcs">
       <article class="svc">
       <div class="svc-text">
       <span class="svc-num">01</span>
       <h3>Digital fabrication</h3>
       <p class="sub">From model to cut part.</p>
-      <p class="desc">Formwork, moulds, furniture and building elements designed for CNC, laser cutting, 3D printing and robotic arms. Geometry comes straight from the model, every part numbered and interlocking, with no manual setting-out on site.</p>
+      <p class="desc">Formwork, moulds, furniture and building elements designed for CNC, laser cutting and 3D printing. Geometry comes straight from the model, every part numbered and interlocking, with no manual setting-out on site.</p>
       <ul>
         <li>Rib formwork and moulds for curved slabs and surfaces</li>
         <li>Parametric joints tuned to material and machine</li>
         <li>Cutting plans and sheet nesting</li>
-        <li>Machine-ready files for CNC, laser, 3D printing and robotic arms</li>
+        <li>Machine-ready files for CNC, laser and 3D printing</li>
         <li>Assembly maps and part schedules</li>
         <li>As-built checks with 3D scanning</li>
       </ul>
@@ -187,21 +186,6 @@
   </div>
 </section>
 
-<!-- ENGAGEMENT -->
-<section class="block" id="engagement">
-  <div class="container">
-    <div class="sec-head">
-      <div><span class="eyebrow">Engagement</span><h2>Three ways to work with BRD.</h2></div>
-      <p>From a one-off review to ongoing support alongside your team.</p>
-    </div>
-    <div class="hire">
-      <div><span class="tag">One-off</span><h3>Assessment</h3><p>One topic analysed on the design you already have, with a clear recommendation. A good way to find out whether it is worth optimizing, rationalizing or automating.</p></div>
-      <div><span class="tag">Fixed scope</span><h3>Project</h3><p>One or more services with defined deliverables: fabrication files, an optimization study or a ready-to-use tool.</p></div>
-      <div class="main"><span class="tag">Monthly plan</span><h3>Embedded support</h3><p>Computational design alongside your team throughout development, from first study to construction.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="corner br" aria-hidden="true"></div>
@@ -233,6 +217,7 @@
   </div>
 </footer>
 
+<script src="../assets/js/components.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

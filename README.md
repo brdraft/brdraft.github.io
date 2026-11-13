@@ -13,7 +13,8 @@ en/services/*.html      páginas dos 4 serviços (EN)
 projetos/_modelo.html   modelo de página de projeto (PT)
 en/projects/_template.html  modelo de página de projeto (EN)
 assets/css/style.css    estilos (identidade BRD: Outfit + verde-sálvia)
-assets/js/main.js       menu mobile, cabeçalho e desenho da capa
+assets/js/main.js       menu, cabeçalho, capa paramétrica interativa e animações
+assets/js/components.js componentes reutilizáveis (ex.: <brd-engagement>), texto num lugar só
 assets/img/             favicon e imagens
 .nojekyll               evita processamento Jekyll no Pages
 ```
@@ -38,3 +39,26 @@ O workflow publica só os arquivos do site: `backlog/`, `BACKLOG.md`, `README.md
 1. Em `index.html`, remova o atributo `hidden` de `<section id="projetos">` e descomente o link "Projetos" no menu. Faça o mesmo em `en/index.html` (`#projects`).
 2. Copie `projetos/_modelo.html` para `projetos/<slug>.html` (e o modelo EN para `en/projects/<slug>.html`), preencha e remova a linha `noindex`.
 3. Coloque as imagens em `assets/img/projetos/<slug>/` e aponte os cards da home para as novas páginas.
+
+## Componentes
+
+Blocos que aparecem em mais de uma página ficam em `assets/js/components.js` e entram nas páginas como uma tag:
+
+| Tag | O que é | Onde aparece |
+|---|---|---|
+| `<brd-engagement lang="pt">` / `lang="en"` | "Três formas de trabalhar com a BRD" | home e página Sobre |
+
+Para mudar o texto, edite só o `components.js`. O atributo `compact` diminui o espaço acima da seção (é usado na home). A página precisa carregar `components.js` antes de `main.js`.
+
+## Animações
+
+Ficam em `assets/js/main.js` (comportamento) e no fim de `assets/css/style.css` (bloco "animações"):
+
+- **Capa:** as costelas se desenham ao abrir, ondulam devagar e se deformam perto do cursor.
+- **Entradas ao rolar:** títulos, cartões e etiquetas aparecem em sequência.
+- **Imagens:** revelação em cortina ao entrar na tela.
+- **Cartões:** brilho que segue o mouse.
+- **Cabeçalho:** some ao rolar para baixo e volta ao subir.
+- **Placeholders:** listras em movimento lento.
+
+Tudo é desligado automaticamente quando o sistema do visitante pede "reduzir movimento", e na impressão todo o conteúdo aparece.

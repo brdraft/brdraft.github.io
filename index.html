@@ -61,14 +61,8 @@
   </div>
 </section>
 
-<div class="container">
-  <div class="facts">
-    <div><b>4</b><span class="lbl">Frentes de serviço</span></div>
-    <div><b>Rhino · Revit</b><span class="lbl">Integrado ao seu fluxo</span></div>
-    <div class="wide"><b>CNC · Laser · 3D · Robô</b><span class="lbl">Arquivos prontos para máquina</span></div>
-    <div><b>Python · C#</b><span class="lbl">Ferramentas sob medida</span></div>
-  </div>
-</div>
+<!-- CONTRATAÇÃO: componente, conteúdo em assets/js/components.js -->
+<brd-engagement lang="pt" compact></brd-engagement>
 
 <!-- SERVIÇOS -->
 <section class="block" id="servicos">
@@ -77,19 +71,24 @@
       <div><span class="eyebrow">Serviços</span><h2>Quatro frentes, um mesmo modelo.</h2></div>
       <p>Cada serviço pode ser contratado sozinho ou combinado. O modelo paramétrico construído para analisar um projeto é o mesmo que depois gera as peças, as pranchas e os quantitativos.</p>
     </div>
-
+    <div class="facts in-svcs">
+        <div><b>4</b><span class="lbl">Frentes de serviço</span></div>
+        <div><b>Rhino · Revit</b><span class="lbl">Integrado ao seu fluxo</span></div>
+        <div><b>CNC · Laser</b><span class="lbl">Arquivos prontos para máquina</span></div>
+        <div><b>Python · C#</b><span class="lbl">Ferramentas sob medida</span></div>
+  </div>
     <div class="svcs">
       <article class="svc" id="fabricacao">
       <div class="svc-text">
       <span class="svc-num">01</span>
       <h3>Fabricação digital</h3>
       <p class="sub">Do modelo à peça cortada.</p>
-      <p class="desc">Formas, moldes, mobiliário e elementos construtivos desenhados para CNC, corte a laser, impressão 3D e braço robótico. A geometria sai direto do modelo, cada peça numerada e encaixada, sem marcação manual em obra.</p>
+      <p class="desc">Formas, moldes, mobiliário e elementos construtivos desenhados para CNC, corte a laser e impressão 3D. A geometria sai direto do modelo, cada peça numerada e encaixada, sem marcação manual em obra.</p>
       <ul>
         <li>Formas e moldes em costelas para lajes e superfícies curvas</li>
         <li>Encaixes paramétricos calibrados para o material e a máquina</li>
         <li>Planos de corte e aproveitamento de chapas (nesting)</li>
-        <li>Arquivos prontos para máquina: CNC, laser, impressão 3D e braço robótico</li>
+        <li>Arquivos prontos para máquina: CNC, laser e impressão 3D</li>
         <li>Mapas de montagem e tabelas de peças</li>
         <li>Conferência da peça montada por escaneamento 3D</li>
       </ul>
@@ -196,21 +195,6 @@
   </div>
 </section>
 
-<!-- CONTRATAÇÃO -->
-<section class="block" id="contratar">
-  <div class="container">
-    <div class="sec-head">
-      <div><span class="eyebrow">Contratação</span><h2>Três formas de trabalhar com a BRD.</h2></div>
-      <p>Do parecer pontual ao acompanhamento contínuo junto da sua equipe.</p>
-    </div>
-    <div class="hire">
-      <div><span class="tag">Pontual</span><h3>Diagnóstico</h3><p>Um tema analisado sobre o projeto que você já tem, com parecer objetivo. Bom para saber se vale otimizar, racionalizar ou automatizar.</p></div>
-      <div><span class="tag">Por escopo</span><h3>Projeto fechado</h3><p>Um ou mais serviços com entregáveis definidos: arquivos de fabricação, estudo de otimização ou ferramenta pronta para uso.</p></div>
-      <div class="main"><span class="tag">Plano mensal</span><h3>Acompanhamento</h3><p>Design computacional junto da sua equipe durante todo o desenvolvimento, do primeiro estudo à obra.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTATO -->
 <section class="contact" id="contato">
   <div class="corner br" aria-hidden="true"></div>
@@ -242,6 +226,7 @@
   </div>
 </footer>
 
+<script src="assets/js/components.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
