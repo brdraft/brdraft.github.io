@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BRD · Design Computacional</title>
+<meta name="description" content="BRD Computational Design: fabricação digital, geometria complexa, simulação e otimização, e automação de processos para arquitetura e engenharia.">
+<meta property="og:title" content="BRD · Design Computacional">
+<meta property="og:description" content="Fabricação digital, geometria complexa, simulação e otimização, e automação para arquitetura e engenharia.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="pt-BR" href="index.html">
+<link rel="alternate" hreflang="en" href="en/index.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="brd-mark" viewBox="0 0 50 56">
+    <path d="M0 0 A27 28 0 0 1 0 56 Z" fill="#ebebeb"/>
+    <path d="M44 0 A23 28 0 0 0 44 56 Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<header class="site-head">
+  <div class="container">
+    <a class="logo" href="#top" aria-label="BRD, início"><svg viewBox="0 0 50 56"><use href="#brd-mark"/></svg><span>brd</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <!-- <a href="#projetos">Projetos</a>  ← reativar quando houver projetos -->
+      <a href="sobre.html">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a class="lang" href="en/index.html" hreflang="en" lang="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- CAPA -->
+<section class="hero" id="top">
+  <div class="corner tl" aria-hidden="true"></div>
+  <div class="container">
+    <div>
+      <span class="eyebrow">Arquitetura, engenharia e computação</span>
+      <h1>Design computacional a serviço do projeto.</h1>
+      <p class="lede">Agregamos qualidade às soluções de projeto com modelos paramétricos, análises, simulações e ferramentas digitais sob medida para cada projeto. Do encaixe de uma peça cortada em CNC à otimização de um sistema inteiro, transformamos decisões de projeto em algo que se mede, se melhora e se fabrica.</p>
+      <div class="actions">
+        <a class="btn" href="#contato">Falar com a BRD</a>
+        <a class="btn ghost" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><svg id="ribs" preserveAspectRatio="xMidYMid meet"></svg></div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="facts">
+    <div><b>4</b><span class="lbl">Frentes de serviço</span></div>
+    <div><b>Rhino · Revit</b><span class="lbl">Integrado ao seu fluxo</span></div>
+    <div class="wide"><b>CNC · Laser · 3D · Robô</b><span class="lbl">Arquivos prontos para máquina</span></div>
+    <div><b>Python · C#</b><span class="lbl">Ferramentas sob medida</span></div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section class="block" id="servicos">
+  <div class="container">
+    <div class="sec-head">
+      <div><span class="eyebrow">Serviços</span><h2>Quatro frentes, um mesmo modelo.</h2></div>
+      <p>Cada serviço pode ser contratado sozinho ou combinado. O modelo paramétrico construído para analisar um projeto é o mesmo que depois gera as peças, as pranchas e os quantitativos.</p>
+    </div>
+
+    <div class="svcs">
+      <article class="svc" id="fabricacao">
+      <div class="svc-text">
+      <span class="svc-num">01</span>
+      <h3>Fabricação digital</h3>
+      <p class="sub">Do modelo à peça cortada.</p>
+      <p class="desc">Formas, moldes, mobiliário e elementos construtivos desenhados para CNC, corte a laser, impressão 3D e braço robótico. A geometria sai direto do modelo, cada peça numerada e encaixada, sem marcação manual em obra.</p>
+      <ul>
+        <li>Formas e moldes em costelas para lajes e superfícies curvas</li>
+        <li>Encaixes paramétricos calibrados para o material e a máquina</li>
+        <li>Planos de corte e aproveitamento de chapas (nesting)</li>
+        <li>Arquivos prontos para máquina: CNC, laser, impressão 3D e braço robótico</li>
+        <li>Mapas de montagem e tabelas de peças</li>
+        <li>Conferência da peça montada por escaneamento 3D</li>
+      </ul>
+      <a class="svc-link" href="servicos/fabricacao-digital.html">Ver portfólio de fabricação digital <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="svc-media">
+        <!-- TROCAR: <img src="assets/img/servicos/fabricacao.gif" alt="" loading="lazy"> -->
+        <div class="media-ph"><span class="lbl">GIF · fabricação digital</span><span>Em breve</span></div>
+      </figure>
+      </article>
+
+      <article class="svc" id="otimizacao">
+      <div class="svc-text">
+      <span class="svc-num">02</span>
+      <h3>Simulação e otimização</h3>
+      <p class="sub">Cada decisão medida antes da obra.</p>
+      <p class="desc">Simulamos sol, luz, energia, vento, água, som e fluxo de pessoas sobre o modelo do seu projeto e testamos milhares de variações para encontrar a que entrega mais com menos, com normas brasileiras como referência.</p>
+      <ul>
+        <li>Radiação, fotovoltaico, luz natural e ofuscamento</li>
+        <li>Desempenho térmico e energético (NBR 15575, PBE Edifica)</li>
+        <li>Vento e conforto urbano (CFD), drenagem e acústica</li>
+        <li>Otimização de um ou vários objetivos, com fronteira de Pareto</li>
+        <li>Pareceres e pranchas para aprovação e certificação</li>
+      </ul>
+      <a class="svc-link" href="servicos/simulacao-otimizacao.html">Ver portfólio de simulação e otimização <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="svc-media">
+        <div class="media-grid">
+          <img class="main" src="assets/img/servicos/cobertura-solar.webp" alt="Trajetória solar anual e radiação sobre a cobertura curva de um projeto da BRD." width="1800" height="1200" loading="lazy">
+          <img src="assets/img/servicos/placas-solares.webp" alt="Radiação solar anual sobre a cobertura, com módulos fotovoltaicos só nas zonas de maior geração." width="1800" height="1012" loading="lazy">
+          <img src="assets/img/servicos/agua-cobertura.webp" alt="Simulação de gotas de água sobre a cobertura curva até os pontos de coleta." width="1800" height="600" loading="lazy">
+        </div>
+        <figcaption>Cobertura curva, projeto BRD: radiação solar e escoamento da água. Layout fotovoltaico em modelo ilustrativo.</figcaption>
+      </figure>
+      </article>
+
+      <article class="svc" id="geometria">
+      <div class="svc-text">
+      <span class="svc-num">03</span>
+      <h3>Geometria complexa</h3>
+      <p class="sub">Formas livres que se constroem.</p>
+      <p class="desc">Estruturas paramétricas e racionalização de superfícies para que a forma desejada caiba no orçamento e na capacidade de quem vai fabricar, com o menor número possível de tipos de peça.</p>
+      <ul>
+        <li>Coberturas, fachadas e estruturas paramétricas</li>
+        <li>Racionalização em painéis planos, curvados a frio ou moldados</li>
+        <li>Paginação de revestimentos e famílias de peças</li>
+        <li>Busca de forma (form-finding) e grelhas, com verificação estrutural preliminar</li>
+        <li>Projeto executivo e detalhamento técnico, compatível com BIM (IFC/Revit)</li>
+      </ul>
+      <a class="svc-link" href="servicos/geometria-complexa.html">Ver portfólio de geometria complexa <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="svc-media">
+        <!-- TROCAR: <img src="assets/img/servicos/geometria.gif" alt="" loading="lazy"> -->
+        <div class="media-ph"><span class="lbl">GIF · geometria complexa</span><span>Em breve</span></div>
+      </figure>
+      </article>
+
+      <article class="svc" id="automacao">
+      <div class="svc-text">
+      <span class="svc-num">04</span>
+      <h3>Automação</h3>
+      <p class="sub">Menos tarefa repetitiva, mais projeto.</p>
+      <p class="desc">Ferramentas, scripts e fluxos de dados sob medida para a rotina de escritórios de arquitetura e engenharia: o que hoje leva dias de trabalho manual passa a levar minutos, sempre do mesmo jeito.</p>
+      <ul>
+        <li>Plugins e rotinas para Revit, Rhino, Grasshopper e Dynamo</li>
+        <li>Geração automática de pranchas, tabelas e quantitativos</li>
+        <li>Verificação de regras de projeto e de normas</li>
+        <li>Integração BIM + GIS (Revit, IFC, ArcGIS)</li>
+        <li>Painéis e configuradores web para clientes e equipes</li>
+      </ul>
+      <a class="svc-link" href="servicos/automacao.html">Ver portfólio de automação <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="svc-media">
+        <!-- TROCAR: <img src="assets/img/servicos/automacao.gif" alt="" loading="lazy"> -->
+        <div class="media-ph"><span class="lbl">Imagem · automação</span><span>Em breve</span></div>
+      </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS: oculto até haver projetos publicáveis. Para ativar: remova o atributo "hidden"
+     e descomente o link "Projetos" no menu. Cada card aponta para uma página em /projetos/. -->
+<section class="block" id="projetos" hidden>
+  <div class="container">
+    <div class="sec-head">
+      <div><span class="eyebrow">Projetos</span><h2>Trabalhos selecionados.</h2></div>
+      <p>Uma seleção de projetos em fabricação digital, geometria complexa, simulação e automação.</p>
+    </div>
+    <div class="projects">
+      <a class="proj" href="projetos/_modelo.html">
+        <div class="thumb"><!-- <img src="assets/img/projetos/slug/capa.jpg" alt="" loading="lazy"> --></div>
+        <h3>Nome do projeto</h3><p>Fabricação digital · Cidade, ano</p>
+      </a>
+      <a class="proj" href="projetos/_modelo.html">
+        <div class="thumb"></div>
+        <h3>Nome do projeto</h3><p>Geometria complexa · Cidade, ano</p>
+      </a>
+      <a class="proj" href="projetos/_modelo.html">
+        <div class="thumb"></div>
+        <h3>Nome do projeto</h3><p>Simulação e otimização · Cidade, ano</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRATAÇÃO -->
+<section class="block" id="contratar">
+  <div class="container">
+    <div class="sec-head">
+      <div><span class="eyebrow">Contratação</span><h2>Três formas de trabalhar com a BRD.</h2></div>
+      <p>Do parecer pontual ao acompanhamento contínuo junto da sua equipe.</p>
+    </div>
+    <div class="hire">
+      <div><span class="tag">Pontual</span><h3>Diagnóstico</h3><p>Um tema analisado sobre o projeto que você já tem, com parecer objetivo. Bom para saber se vale otimizar, racionalizar ou automatizar.</p></div>
+      <div><span class="tag">Por escopo</span><h3>Projeto fechado</h3><p>Um ou mais serviços com entregáveis definidos: arquivos de fabricação, estudo de otimização ou ferramenta pronta para uso.</p></div>
+      <div class="main"><span class="tag">Plano mensal</span><h3>Acompanhamento</h3><p>Design computacional junto da sua equipe durante todo o desenvolvimento, do primeiro estudo à obra.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato">
+  <div class="corner br" aria-hidden="true"></div>
+  <div class="container">
+    <div>
+      <span class="eyebrow">Contato</span>
+      <h2>Tem um projeto difícil de desenhar, medir ou fabricar?</h2>
+      <p>Mande o que você tem, mesmo que seja só uma ideia ou um arquivo de estudo. Respondemos com uma proposta de escopo.</p>
+    </div>
+    <div class="contact-list">
+      <!-- TROCAR: e-mail comercial -->
+      <a href="mailto:brd.adm@exemplo.com"><div><span class="lbl">E-mail</span>brd.adm@exemplo.com</div><span class="arrow">→</span></a>
+      <!-- WhatsApp: preencher o número (só dígitos, com 55 + DDD) e descomentar
+      <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener"><div><span class="lbl">WhatsApp</span>+55 (XX) XXXXX-XXXX</div><span class="arrow">↗</span></a>
+      -->
+      <!-- LinkedIn: descomentar quando a página existir
+      <a href="https://www.linkedin.com/company/XXXX" target="_blank" rel="noopener"><div><span class="lbl">LinkedIn</span>BRD Computational Design</div><span class="arrow">↗</span></a>
+      -->
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="container">
+    <span>© <span data-year>2026</span> BRDRAFT Computational Design Ltda. · Campinas, SP</span>
+    <a href="en/index.html" hreflang="en" lang="en">English version</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
