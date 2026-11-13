@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # Publica sÃ³ os arquivos do site; material interno fica fora.
+      # Publica só os arquivos do site; material interno fica fora.
       - name: Montar _site
         run: |
           mkdir _site
