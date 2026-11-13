@@ -24,4 +24,4 @@ Ideias para a próxima versão: um diagrama de fluxo em vez dos cartões, um exe
 
 - Seção de projetos (já está no código, oculta): ativar quando houver projetos publicáveis.
 - Contatos: e-mail definitivo, WhatsApp, LinkedIn.
-- Imagens dos serviços: GIF de fabricação digital (`assets/img/servicos/fabricacao.gif`), GIF de geometria complexa (`geometria.gif`) e imagem de automação (`automacao.gif`). Na home, cada placeholder tem um comentário `TROCAR` com a tag `<img>` pronta.
+- Imagens dos serviços: falta o GIF de fabricação digital (`assets/img/servicos/fabricacao.gif`). Geometria complexa e automação já têm imagem principal (`bambu-pavilhao.webp` e `automacao-cotas.gif`).

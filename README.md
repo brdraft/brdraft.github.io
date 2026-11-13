@@ -30,8 +30,6 @@ O workflow publica só os arquivos do site: `backlog/`, `BACKLOG.md`, `README.md
 
 | O quê | Onde |
 |---|---|
-| E-mail comercial (`brd.adm@exemplo.com`) | `index.html` e `en/index.html`, seção contato |
-| WhatsApp | bloco comentado na seção contato (PT e EN) |
 | LinkedIn | bloco comentado na seção contato (PT e EN) |
 
 ## Ativar a seção de projetos

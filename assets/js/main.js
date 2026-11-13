@@ -198,3 +198,8 @@
     });
   });
 })();
+
+// Vídeos em loop (ex.: nuvem de pontos): pausa se o visitante pede menos movimento
+if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('video[autoplay]').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+}

@@ -89,8 +89,8 @@ section.block{padding-block:var(--s6) 0}
 .svc li{padding-left:22px;position:relative}
 .svc li::before{content:"";position:absolute;left:0;top:.42em;width:11px;height:11px;border-radius:4px;background:var(--sage-100);box-shadow:inset 0 0 0 4px var(--sage-500)}
 .svc-media{margin:0}
-.svc-media > img,.media-grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-md);border:1px solid var(--line);background:var(--paper)}
-.svc-media > img{height:auto}
+.svc-media > img,.svc-media > video,.media-grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-md);border:1px solid var(--line);background:var(--paper)}
+.svc-media > img,.svc-media > video{height:auto;display:block}
 .media-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s2)}
 .media-grid .main{grid-column:1 / -1;aspect-ratio:3/2}
 .media-grid img:not(.main){aspect-ratio:4/3}
@@ -168,6 +168,13 @@ brd-team{display:block}
 .contact-list a:hover{border-color:var(--sage-500)}
 .contact-list .lbl{margin-bottom:2px}
 .contact-list .arrow{color:var(--sage-500);font-size:20px}
+.mini-founders{margin-top:var(--s4)}
+.mini-founders ul{list-style:none;margin:var(--s2) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4)}
+.mini-founders li{display:flex;align-items:center;gap:12px}
+.mini-founders img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--paper);box-shadow:0 0 0 1px var(--line)}
+.mini-founders strong{display:block;font-weight:400;font-size:16px;color:var(--ink)}
+.mini-founders small{display:block;font-size:13px;color:var(--ink-2)}
+.mini-founders small.cau{font-size:11px;letter-spacing:.04em;color:var(--ink-3);margin-top:2px}
 
 /* rodapé */
 .site-foot{padding-block:var(--s4) var(--s5);font-size:12px;color:var(--ink-3);letter-spacing:.03em}
@@ -247,6 +254,7 @@ brd-team{display:block}
 .others .tile[href$="geometria-complexa.html"],.others .tile[href$="complex-geometry.html"]{--tile-img:url(../img/servicos/bambu-pavilhao.webp)}
 .others .tile[href$="fabricacao-digital.html"],.others .tile[href$="digital-fabrication.html"]{--tile-img:url(../img/servicos/forma-costelas.webp)}
 .others .tile[href$="nuvem-de-pontos-bim.html"],.others .tile[href$="point-cloud-bim.html"]{--tile-img:url(../img/servicos/asbuilt-residencia.png)}
+.others .tile[href$="automacao.html"],.others .tile[href$="automation.html"]{--tile-img:url(../img/servicos/automacao-cotas.gif)}
 .others .t-num{font-size:30px;font-weight:200;color:var(--sage-500);line-height:1.1}
 .others .t-title{font-size:18px;font-weight:400}
 .others .t-sub{font-size:13px;color:var(--ink-3)}

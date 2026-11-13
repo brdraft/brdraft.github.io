@@ -70,15 +70,35 @@
   customElements.define('brd-team', class extends HTMLElement {
     connectedCallback() {
       var d = TEAM[this.getAttribute('lang') === 'en' ? 'en' : 'pt'];
+      // founders-only: sem a faixa "Equipe"; first: primeira seção da página
+      var members = this.hasAttribute('founders-only') ? '' :
+        '<span class="lbl team-lbl">' + esc(d.team) + '</span>' +
+        '<div class="team">' + d.members.map(function (p) { return person(p, false); }).join('') + '</div>';
       this.innerHTML =
-        '<section class="block" id="' + d.id + '">' +
+        '<section class="block' + (this.hasAttribute('first') ? ' page-first' : '') + '" id="' + d.id + '">' +
           '<div class="container">' +
             '<div class="sec-head"><div><span class="eyebrow">' + esc(d.eyebrow) + '</span><h2>' + esc(d.title) + '</h2></div></div>' +
             '<div class="founders">' + d.founders.map(function (p) { return person(p, true); }).join('') + '</div>' +
-            '<span class="lbl team-lbl">' + esc(d.team) + '</span>' +
-            '<div class="team">' + d.members.map(function (p) { return person(p, false); }).join('') + '</div>' +
+            members +
           '</div>' +
         '</section>';
+    }
+  });
+
+  // Versão compacta dos fundadores, para a seção de contato:
+  //   <brd-founders-mini lang="pt"></brd-founders-mini>
+  var MINI = { pt: 'Quem vai responder', en: 'Who will reply' };
+  customElements.define('brd-founders-mini', class extends HTMLElement {
+    connectedCallback() {
+      var lang = this.getAttribute('lang') === 'en' ? 'en' : 'pt';
+      this.innerHTML =
+        '<div class="mini-founders"><span class="lbl">' + esc(MINI[lang]) + '</span><ul>' +
+          TEAM[lang].founders.map(function (p) {
+            return '<li><img src="' + IMG + esc(p.img) + '" alt="" width="96" height="96" loading="lazy">' +
+              '<span><strong>' + esc(p.name) + '</strong><small>' + esc(p.role) + '</small>' +
+              (p.cau ? '<small class="cau">' + esc(p.cau) + '</small>' : '') + '</span></li>';
+          }).join('') +
+        '</ul></div>';
     }
   });
 
