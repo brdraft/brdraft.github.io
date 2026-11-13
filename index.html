@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BRD · Design Computacional</title>
-<meta name="description" content="BRD Computational Design: fabricação digital, geometria complexa, simulação e otimização, e automação de processos para arquitetura e engenharia.">
+<meta name="description" content="BRD Computational Design: simulação e otimização, racionalização de geometria complexa, fabricação digital, nuvem de pontos e BIM, e automação de processos para arquitetura e engenharia.">
 <meta property="og:title" content="BRD · Design Computacional">
-<meta property="og:description" content="Fabricação digital, geometria complexa, simulação e otimização, e automação para arquitetura e engenharia.">
+<meta property="og:description" content="Simulação e otimização, racionalização de geometria complexa, fabricação digital, nuvem de pontos e BIM, e automação para arquitetura e engenharia.">
 <meta property="og:type" content="website">
 <link rel="alternate" hreflang="pt-BR" href="index.html">
 <link rel="alternate" hreflang="en" href="en/index.html">
@@ -68,41 +68,19 @@
 <section class="block" id="servicos">
   <div class="container">
     <div class="sec-head">
-      <div><span class="eyebrow">Serviços</span><h2>Quatro frentes, um mesmo modelo.</h2></div>
+      <div><span class="eyebrow">Serviços</span><h2>Cinco frentes, um mesmo modelo.</h2></div>
       <p>Cada serviço pode ser contratado sozinho ou combinado. O modelo paramétrico construído para analisar um projeto é o mesmo que depois gera as peças, as pranchas e os quantitativos.</p>
     </div>
     <div class="facts in-svcs">
-        <div><b>4</b><span class="lbl">Frentes de serviço</span></div>
+        <div><b>5</b><span class="lbl">Frentes de serviço</span></div>
         <div><b>Rhino · Revit</b><span class="lbl">Integrado ao seu fluxo</span></div>
         <div><b>CNC · Laser</b><span class="lbl">Arquivos prontos para máquina</span></div>
         <div><b>Python · C#</b><span class="lbl">Ferramentas sob medida</span></div>
   </div>
     <div class="svcs">
-      <article class="svc" id="fabricacao">
-      <div class="svc-text">
-      <span class="svc-num">01</span>
-      <h3>Fabricação digital</h3>
-      <p class="sub">Do modelo à peça cortada.</p>
-      <p class="desc">Formas, moldes, mobiliário e elementos construtivos desenhados para CNC, corte a laser e impressão 3D. A geometria sai direto do modelo, cada peça numerada e encaixada, sem marcação manual em obra.</p>
-      <ul>
-        <li>Formas e moldes em costelas para lajes e superfícies curvas</li>
-        <li>Encaixes paramétricos calibrados para o material e a máquina</li>
-        <li>Planos de corte e aproveitamento de chapas (nesting)</li>
-        <li>Arquivos prontos para máquina: CNC, laser e impressão 3D</li>
-        <li>Mapas de montagem e tabelas de peças</li>
-        <li>Conferência da peça montada por escaneamento 3D</li>
-      </ul>
-      <a class="svc-link" href="servicos/fabricacao-digital.html">Ver portfólio de fabricação digital <span aria-hidden="true">→</span></a>
-      </div>
-      <figure class="svc-media">
-        <!-- TROCAR: <img src="assets/img/servicos/fabricacao.gif" alt="" loading="lazy"> -->
-        <div class="media-ph"><span class="lbl">GIF · fabricação digital</span><span>Em breve</span></div>
-      </figure>
-      </article>
-
       <article class="svc" id="otimizacao">
       <div class="svc-text">
-      <span class="svc-num">02</span>
+      <span class="svc-num">01</span>
       <h3>Simulação e otimização</h3>
       <p class="sub">Cada decisão medida antes da obra.</p>
       <p class="desc">Simulamos sol, luz, energia, vento, água, som e fluxo de pessoas sobre o modelo do seu projeto e testamos milhares de variações para encontrar a que entrega mais com menos, com normas brasileiras como referência.</p>
@@ -116,19 +94,15 @@
       <a class="svc-link" href="servicos/simulacao-otimizacao.html">Ver portfólio de simulação e otimização <span aria-hidden="true">→</span></a>
       </div>
       <figure class="svc-media">
-        <div class="media-grid">
-          <img class="main" src="assets/img/servicos/cobertura-solar.webp" alt="Trajetória solar anual e radiação sobre a cobertura curva de um projeto da BRD." width="1800" height="1200" loading="lazy">
-          <img src="assets/img/servicos/placas-solares.webp" alt="Radiação solar anual sobre a cobertura, com módulos fotovoltaicos só nas zonas de maior geração." width="1800" height="1012" loading="lazy">
-          <img src="assets/img/servicos/agua-cobertura.webp" alt="Simulação de gotas de água sobre a cobertura curva até os pontos de coleta." width="1800" height="600" loading="lazy">
-        </div>
-        <figcaption>Cobertura curva, projeto BRD: radiação solar e escoamento da água. Layout fotovoltaico em modelo ilustrativo.</figcaption>
+        <img src="assets/img/servicos/cobertura-solar.webp" alt="Trajetória solar anual e radiação sobre a cobertura curva de um projeto da BRD." width="1800" height="1200" loading="lazy">
+        <figcaption>Cobertura curva, projeto BRD: trajetória solar anual e radiação.</figcaption>
       </figure>
       </article>
 
       <article class="svc" id="geometria">
       <div class="svc-text">
-      <span class="svc-num">03</span>
-      <h3>Geometria complexa</h3>
+      <span class="svc-num">02</span>
+      <h3>Racionalização de geometria complexa</h3>
       <p class="sub">Formas livres que se constroem.</p>
       <p class="desc">Estruturas paramétricas e racionalização de superfícies para que a forma desejada caiba no orçamento e na capacidade de quem vai fabricar, com o menor número possível de tipos de peça.</p>
       <ul>
@@ -138,17 +112,59 @@
         <li>Busca de forma (form-finding) e grelhas, com verificação estrutural preliminar</li>
         <li>Projeto executivo e detalhamento técnico, compatível com BIM (IFC/Revit)</li>
       </ul>
-      <a class="svc-link" href="servicos/geometria-complexa.html">Ver portfólio de geometria complexa <span aria-hidden="true">→</span></a>
+      <a class="svc-link" href="servicos/geometria-complexa.html">Ver portfólio de racionalização de geometria complexa <span aria-hidden="true">→</span></a>
       </div>
       <figure class="svc-media">
-        <!-- TROCAR: <img src="assets/img/servicos/geometria.gif" alt="" loading="lazy"> -->
-        <div class="media-ph"><span class="lbl">GIF · geometria complexa</span><span>Em breve</span></div>
+        <img src="assets/img/servicos/bambu-pavilhao.webp" alt="Pavilhão de bambu em paraboloides hiperbólicos, inspirado em Los Manantiales de Félix Candela." width="1452" height="1083" loading="lazy">
+      </figure>
+      </article>
+
+      <article class="svc" id="fabricacao">
+      <div class="svc-text">
+      <span class="svc-num">03</span>
+      <h3>Fabricação digital</h3>
+      <p class="sub">Do modelo à peça cortada.</p>
+      <p class="desc">Formas, moldes, mobiliário e elementos construtivos desenhados para CNC, corte a laser e impressão 3D. Cada peça racionalizada, numerada e encaixada, com mapas de montagem que facilitam o processo na obra.</p>
+      <ul>
+        <li>Formas e moldes em costelas para lajes e superfícies curvas</li>
+        <li>Encaixes paramétricos calibrados para o material e a máquina</li>
+        <li>Planos de corte e aproveitamento de chapas (nesting)</li>
+        <li>Arquivos prontos para máquina: CNC, laser e impressão 3D</li>
+        <li>Mapas de montagem e tabelas de peças</li>
+        <li>Conferência da peça montada por escaneamento 3D</li>
+      </ul>
+      <a class="svc-link" href="servicos/fabricacao-digital.html">Ver portfólio de fabricação digital <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="svc-media">
+        <img src="assets/img/servicos/forma-costelas.webp" alt="Forma da laje curva em costelas de compensado cortadas em CNC." width="1800" height="1012" loading="lazy">
+        <figcaption>Forma da laje curva em costelas de compensado cortadas em CNC.</figcaption>
+      </figure>
+      </article>
+
+      <article class="svc" id="nuvem-de-pontos">
+      <div class="svc-text">
+      <span class="svc-num">04</span>
+      <h3>Nuvem de pontos e BIM</h3>
+      <p class="sub">Do existente ao modelo.</p>
+      <p class="desc">Processamos o escaneamento a laser e a fotogrametria e transformamos a nuvem de pontos em modelos BIM as-built em Revit ou IFC, com plantas e cortes confiáveis para reforma, retrofit e compatibilização.</p>
+      <ul>
+        <li>Escaneamento a laser e fotogrametria do existente</li>
+        <li>Registro e tratamento da nuvem de pontos (E57, RCP, LAS)</li>
+        <li>Modelo as-built em Revit, no nível de detalhe (LOD) combinado</li>
+        <li>Plantas, cortes e elevações do existente</li>
+        <li>Comparação obra × projeto com mapa de desvios</li>
+      </ul>
+      <a class="svc-link" href="servicos/nuvem-de-pontos-bim.html">Ver portfólio de nuvem de pontos e BIM <span aria-hidden="true">→</span></a>
+      </div>
+      <figure class="svc-media">
+        <img src="assets/img/servicos/asbuilt-residencia.png" alt="Modelo BIM as-built de uma residência em Revit." width="1424" height="726" loading="lazy">
+        <figcaption>Modelo BIM as-built de residência em Revit, projeto BRD.</figcaption>
       </figure>
       </article>
 
       <article class="svc" id="automacao">
       <div class="svc-text">
-      <span class="svc-num">04</span>
+      <span class="svc-num">05</span>
       <h3>Automação</h3>
       <p class="sub">Menos tarefa repetitiva, mais projeto.</p>
       <p class="desc">Ferramentas, scripts e fluxos de dados sob medida para a rotina de escritórios de arquitetura e engenharia: o que hoje leva dias de trabalho manual passa a levar minutos, sempre do mesmo jeito.</p>
@@ -163,7 +179,7 @@
       </div>
       <figure class="svc-media">
         <!-- TROCAR: <img src="assets/img/servicos/automacao.gif" alt="" loading="lazy"> -->
-        <div class="media-ph"><span class="lbl">Imagem · automação</span><span>Em breve</span></div>
+        <div class="media-ph"><span class="lbl">automação</span><span>Exemplo em breve</span></div>
       </figure>
       </article>
     </div>
@@ -176,7 +192,7 @@
   <div class="container">
     <div class="sec-head">
       <div><span class="eyebrow">Projetos</span><h2>Trabalhos selecionados.</h2></div>
-      <p>Uma seleção de projetos em fabricação digital, geometria complexa, simulação e automação.</p>
+      <p>Uma seleção de projetos em fabricação digital, racionalização de geometria complexa, simulação e automação.</p>
     </div>
     <div class="projects">
       <a class="proj" href="projetos/_modelo.html">
@@ -185,7 +201,7 @@
       </a>
       <a class="proj" href="projetos/_modelo.html">
         <div class="thumb"></div>
-        <h3>Nome do projeto</h3><p>Geometria complexa · Cidade, ano</p>
+        <h3>Nome do projeto</h3><p>Racionalização de geometria complexa · Cidade, ano</p>
       </a>
       <a class="proj" href="projetos/_modelo.html">
         <div class="thumb"></div>

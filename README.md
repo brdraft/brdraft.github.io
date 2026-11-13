@@ -8,8 +8,8 @@ Site estático (HTML + CSS + JS puro) para GitHub Pages. Sem build, sem dependê
 index.html              home em português (one-page)
 en/index.html           home em inglês
 sobre.html              página Sobre (PT) · en/about.html (EN)
-servicos/*.html         páginas dos 4 serviços (PT)
-en/services/*.html      páginas dos 4 serviços (EN)
+servicos/*.html         páginas dos 5 serviços (PT)
+en/services/*.html      páginas dos 5 serviços (EN)
 projetos/_modelo.html   modelo de página de projeto (PT)
 en/projects/_template.html  modelo de página de projeto (EN)
 assets/css/style.css    estilos (identidade BRD: Outfit + verde-sálvia)

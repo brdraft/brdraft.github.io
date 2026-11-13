@@ -155,6 +155,7 @@
     '.svc-text > *',
     '.caps > .cap', '.others > .tile',
     '.about .text > *', '.tools > div', '.chips > span',
+    '.founders > .person', '.team > .person',
     '.contact .container > div > *', '.contact-list > a',
     '.p-hero > *', '.p-body'
   ];

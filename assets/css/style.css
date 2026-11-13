@@ -137,6 +137,27 @@ section.block{padding-block:var(--s6) 0}
 .where .lbl{margin-bottom:10px}
 .chips span{font-size:13px;padding:5px 12px;border-radius:40px;border:1px solid var(--line);color:var(--ink-2);background:var(--paper)}
 
+/* fundadores e equipe */
+brd-team{display:block}
+.founders{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s5);margin-top:var(--s5)}
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4);margin:var(--s4) auto 0;max-width:640px}
+.team-lbl{margin-top:var(--s6);padding-top:var(--s3);border-top:1px solid var(--line);text-align:center}
+.person{margin:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--s3)}
+.avatar{width:120px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--sage-50);border:1px solid var(--line)}
+.person.big .avatar{width:min(100%,320px)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.person figcaption{display:grid;gap:2px}
+.person strong{font-weight:400;font-size:17px;color:var(--ink)}
+.person.big strong{font-size:clamp(22px,2.4vw,28px);font-weight:300;letter-spacing:-.01em}
+.person figcaption span:not(.lbl){color:var(--ink-2);font-size:15px}
+.person .lbl{margin-top:4px}
+.team .person strong{color:var(--ink-3);font-size:14px}
+@media (max-width:720px){
+  .founders{grid-template-columns:minmax(0,1fr)}
+  .avatar{width:88px}
+  .team{gap:var(--s3)}
+}
+
 /* contato */
 .contact{position:relative;overflow:hidden;margin-top:var(--s6);background:var(--sage-50);padding-block:clamp(56px,8vw,96px)}
 .contact .container{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:var(--s5);align-items:end}
@@ -212,9 +233,20 @@ section.block{padding-block:var(--s6) 0}
 .gallery img{width:100%;height:auto;border-radius:var(--r-md);border:1px solid var(--line);background:var(--paper)}
 .gallery figcaption{font-size:12.5px;color:var(--ink-3);margin-top:8px}
 .real{display:inline-block;margin-left:6px;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;padding:1px 8px;border-radius:20px;background:var(--ink);color:var(--paper);vertical-align:1px}
-.others{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s3);margin-top:var(--s4)}
+.others{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s3);margin-top:var(--s4)}
 .others .tile{display:flex;flex-direction:column;gap:4px;padding:22px;border:1px solid var(--line);border-radius:var(--r-md);color:var(--ink);text-decoration:none;transition:background .15s,border-color .15s}
 .others .tile:hover{background:var(--sage-50);border-color:var(--sage-100)}
+/* foto principal do serviço no fundo do card, em P&B bem clarinho, sumindo para a esquerda */
+.others .tile{position:relative;overflow:hidden;isolation:isolate}
+.others .tile::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:var(--tile-img,none) right center/cover no-repeat;filter:grayscale(1) contrast(.9);opacity:.16;
+  -webkit-mask-image:linear-gradient(to left,#000 10%,transparent 90%);mask-image:linear-gradient(to left,#000 10%,transparent 90%);
+  transition:opacity .3s}
+.others .tile:hover::before{opacity:.26}
+.others .tile[href$="simulacao-otimizacao.html"],.others .tile[href$="simulation-optimization.html"]{--tile-img:url(../img/servicos/cobertura-solar.webp)}
+.others .tile[href$="geometria-complexa.html"],.others .tile[href$="complex-geometry.html"]{--tile-img:url(../img/servicos/bambu-pavilhao.webp)}
+.others .tile[href$="fabricacao-digital.html"],.others .tile[href$="digital-fabrication.html"]{--tile-img:url(../img/servicos/forma-costelas.webp)}
+.others .tile[href$="nuvem-de-pontos-bim.html"],.others .tile[href$="point-cloud-bim.html"]{--tile-img:url(../img/servicos/asbuilt-residencia.png)}
 .others .t-num{font-size:30px;font-weight:200;color:var(--sage-500);line-height:1.1}
 .others .t-title{font-size:18px;font-weight:400}
 .others .t-sub{font-size:13px;color:var(--ink-3)}
