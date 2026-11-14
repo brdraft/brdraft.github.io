@@ -94,6 +94,12 @@ section.block{padding-block:var(--s6) 0}
 .media-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s2)}
 .media-grid .main{grid-column:1 / -1;aspect-ratio:3/2}
 .media-grid img:not(.main){aspect-ratio:4/3}
+.media-grid.plans{align-items:start}
+/* plantas com a mesma caixa; a superior sobe para a parede de cima das duas ficar na mesma linha */
+.media-grid.plans img{height:auto}
+.media-grid.plans img.main{aspect-ratio:auto}
+.media-grid.plans img:not(.main){aspect-ratio:1576/819;object-fit:cover;object-position:50% 0}
+.media-grid.plans img.plan-sup{object-position:50% 92%}
 .svc-media figcaption{font-size:12px;color:var(--ink-3);margin-top:10px}
 .media-ph{aspect-ratio:4/3;border-radius:var(--r-md);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:24px;color:var(--ink-3);font-size:13px;
   background:var(--sage-50) repeating-linear-gradient(135deg,transparent 0 22px,rgba(135,163,146,.14) 22px 23px)}
@@ -239,6 +245,11 @@ brd-team{display:block}
 .gallery figure{margin:0}
 .gallery img{width:100%;height:auto;border-radius:var(--r-md);border:1px solid var(--line);background:var(--paper)}
 .gallery figcaption{font-size:12.5px;color:var(--ink-3);margin-top:8px}
+.gallery.pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gallery .wide{grid-column:1 / -1}
+.gallery-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s4) var(--s3);align-items:start}
+.gallery-row .span2{grid-column:span 2}
+.gallery-row.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .real{display:inline-block;margin-left:6px;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;padding:1px 8px;border-radius:20px;background:var(--ink);color:var(--paper);vertical-align:1px}
 .others{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s3);margin-top:var(--s4)}
 .others .tile{display:flex;flex-direction:column;gap:4px;padding:22px;border:1px solid var(--line);border-radius:var(--r-md);color:var(--ink);text-decoration:none;transition:background .15s,border-color .15s}
@@ -259,7 +270,9 @@ brd-team{display:block}
 .others .t-title{font-size:18px;font-weight:400}
 .others .t-sub{font-size:13px;color:var(--ink-3)}
 @media (max-width:900px){.caps,.gallery,.others{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
-@media (max-width:720px){.caps,.gallery,.others{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.gallery-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (max-width:720px){.gallery-row{grid-template-columns:minmax(0,1fr)}.gallery-row .span2{grid-column:auto}}
+@media (max-width:720px){.caps,.gallery,.gallery.pair,.others{grid-template-columns:minmax(0,1fr)}}
 
 /* página do estúdio */
 .page-first{padding-top:clamp(56px,8vw,112px)}
