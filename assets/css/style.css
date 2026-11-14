@@ -253,7 +253,7 @@ brd-team{display:block}
 .gallery-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s4) var(--s3);align-items:start}
 .gallery-row .span2{grid-column:span 2}
 .gallery-row.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.real{display:inline-block;margin-left:6px;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;padding:1px 8px;border-radius:20px;background:var(--ink);color:var(--paper);vertical-align:1px}
+.real{display:inline-block;margin-left:6px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;padding:0 7px;border-radius:20px;border:1px solid var(--line);color:var(--sage-700);background:transparent;vertical-align:1px;white-space:nowrap}
 .others{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s3);margin-top:var(--s4)}
 .others .tile{display:flex;flex-direction:column;gap:4px;padding:22px;border:1px solid var(--line);border-radius:var(--r-md);color:var(--ink);text-decoration:none;transition:background .15s,border-color .15s}
 .others .tile:hover{background:var(--sage-50);border-color:var(--sage-100)}
