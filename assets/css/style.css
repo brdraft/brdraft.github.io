@@ -169,7 +169,7 @@ brd-team{display:block}
 
 /* contato */
 .contact{position:relative;overflow:hidden;margin-top:var(--s6);background:var(--sage-50);padding-block:clamp(56px,8vw,96px)}
-.contact .container{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:var(--s5);align-items:end}
+.contact .container{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s5);align-items:end}
 .contact h2{font-weight:200;font-size:clamp(34px,4.6vw,56px);line-height:1.06;letter-spacing:-.02em;margin-top:var(--s2)}
 .contact p{color:var(--ink-2);margin-top:var(--s3);max-width:48ch}
 .contact-list{display:grid;gap:var(--s2)}
@@ -328,3 +328,10 @@ brd-engagement{display:block}
 .nav a:not(.lang):hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
 @media (max-width:720px){.nav a:not(.lang)::after{display:none}}
 @media print{.anim .reveal,.anim .wipe > *,.anim .wipe img{opacity:1!important;transform:none!important;clip-path:none!important}.site-head.hide{transform:none}}
+.mini-founders a.wa{display:inline-block;margin-top:6px;font-size:12px;color:var(--sage-700);text-decoration:none;border-bottom:1px solid var(--line)}.mini-founders a.wa:hover{border-color:currentColor}
+.contact-list .mini-founders{margin:0 0 var(--s2)}
+.contact-list .mini-founders ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3)}
+.contact-list .mini-founders li{align-items:flex-start}
+.contact-list .mini-founders a.wa{display:inline-block;padding:0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;font-size:12px;color:var(--sage-700)}
+.contact-list .mini-founders a.wa:hover{border-color:currentColor}
+@media (max-width:560px){.contact-list .mini-founders ul{grid-template-columns:minmax(0,1fr)}}

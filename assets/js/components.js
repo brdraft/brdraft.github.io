@@ -40,16 +40,16 @@
     pt: {
       id: 'equipe', eyebrow: 'Fundadores', title: 'Quem está por trás da BRD.', team: 'Equipe',
       founders: [
-        { name: 'Pitanga Vigand', role: 'Arquiteta · Co-fundadora', cau: 'CAU A292912-0', img: 'pitanga-vigand.jpg' },
-        { name: 'Thiers Nobrega', role: 'Arquiteto · Co-fundador', cau: 'CAU A334933-0', img: 'thiers-nobrega.jpg' }
+        { name: 'Pitanga Vigand', role: 'Arquiteta · Co-fundadora', cau: 'CAU A292912-0', img: 'pitanga-vigand.jpg', wa: '5521995266007', waLabel: '+55 (21) 99526-6007' },
+        { name: 'Thiers Nobrega', role: 'Arquiteto · Co-fundador', cau: 'CAU A334933-0', img: 'thiers-nobrega.jpg', wa: '5521972080764', waLabel: '+55 (21) 97208-0764' }
       ],
       members: [{ name: 'Em breve' }, { name: 'Em breve' }, { name: 'Em breve' }]
     },
     en: {
       id: 'team', eyebrow: 'Founders', title: 'The people behind BRD.', team: 'Team',
       founders: [
-        { name: 'Pitanga Vigand', role: 'Architect · Co-founder', cau: 'CAU A292912-0', img: 'pitanga-vigand.jpg' },
-        { name: 'Thiers Nobrega', role: 'Architect · Co-founder', cau: 'CAU A334933-0', img: 'thiers-nobrega.jpg' }
+        { name: 'Pitanga Vigand', role: 'Architect · Co-founder', cau: 'CAU A292912-0', img: 'pitanga-vigand.jpg', wa: '5521995266007', waLabel: '+55 (21) 99526-6007' },
+        { name: 'Thiers Nobrega', role: 'Architect · Co-founder', cau: 'CAU A334933-0', img: 'thiers-nobrega.jpg', wa: '5521972080764', waLabel: '+55 (21) 97208-0764' }
       ],
       members: [{ name: 'Coming soon' }, { name: 'Coming soon' }, { name: 'Coming soon' }]
     }
@@ -92,11 +92,11 @@
     connectedCallback() {
       var lang = this.getAttribute('lang') === 'en' ? 'en' : 'pt';
       this.innerHTML =
-        '<div class="mini-founders"><span class="lbl">' + esc(MINI[lang]) + '</span><ul>' +
+        '<div class="mini-founders"><ul>' +
           TEAM[lang].founders.map(function (p) {
             return '<li><img src="' + IMG + esc(p.img) + '" alt="" width="96" height="96" loading="lazy">' +
               '<span><strong>' + esc(p.name) + '</strong><small>' + esc(p.role) + '</small>' +
-              (p.cau ? '<small class="cau">' + esc(p.cau) + '</small>' : '') + '</span></li>';
+              (p.cau ? '<small class="cau">' + esc(p.cau) + '</small>' : '') + (p.wa ? '<a class="wa" href="https://wa.me/' + esc(p.wa) + '" target="_blank" rel="noopener">WhatsApp ' + esc(p.waLabel) + ' ↗</a>' : '') + '</span></li>';
           }).join('') +
         '</ul></div>';
     }
