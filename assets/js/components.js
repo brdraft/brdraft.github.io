@@ -15,7 +15,7 @@
       intro: 'Do parecer pontual ao acompanhamento contínuo junto da sua equipe.',
       cards: [
         { tag: 'Pontual', h: 'Diagnóstico', p: 'Um tema analisado sobre o projeto que você já tem, com parecer objetivo. Bom para saber se vale otimizar, racionalizar ou automatizar.' },
-        { tag: 'Por escopo', h: 'Projeto fechado', p: 'Um ou mais serviços com entregáveis definidos: arquivos de fabricação, estudo de otimização ou ferramenta pronta para uso.' },
+        { tag: 'Por escopo', h: 'Projeto fechado', green: true, p: 'Um ou mais serviços com entregáveis definidos: arquivos de fabricação, estudo de otimização ou ferramenta pronta para uso.' },
         { tag: 'Plano mensal', h: 'Acompanhamento', p: 'Design computacional junto da sua equipe durante todo o desenvolvimento, do primeiro estudo à obra.', main: true }
       ]
     },
@@ -26,7 +26,7 @@
       intro: 'From a one-off review to ongoing support alongside your team.',
       cards: [
         { tag: 'One-off', h: 'Assessment', p: 'One topic analysed on the design you already have, with a clear recommendation. A good way to find out whether it is worth optimizing, rationalizing or automating.' },
-        { tag: 'Fixed scope', h: 'Project', p: 'One or more services with defined deliverables: fabrication files, an optimization study or a ready-to-use tool.' },
+        { tag: 'Fixed scope', h: 'Project', green: true, p: 'One or more services with defined deliverables: fabrication files, an optimization study or a ready-to-use tool.' },
         { tag: 'Monthly plan', h: 'Embedded support', p: 'Computational design alongside your team throughout development, from first study to construction.', main: true }
       ]
     }
@@ -108,7 +108,7 @@
     connectedCallback() {
       var d = ENGAGEMENT[this.getAttribute('lang') === 'en' ? 'en' : 'pt'];
       var cards = d.cards.map(function (c) {
-        return '<div' + (c.main ? ' class="main"' : '') + '><span class="tag">' + esc(c.tag) + '</span><h3>' + esc(c.h) + '</h3><p>' + esc(c.p) + '</p></div>';
+        return '<div' + (c.main ? ' class="main"' : c.green ? ' class="green"' : '') + '><span class="tag">' + esc(c.tag) + '</span><h3>' + esc(c.h) + '</h3><p>' + esc(c.p) + '</p></div>';
       }).join('');
       this.innerHTML =
         '<section class="block' + (this.hasAttribute('compact') ? ' tight' : '') + '" id="' + d.id + '">' +

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRD · Cartões de visita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* 90 × 50 mm (padrão BR). Cada cartão = frente + verso, uma página por face.
+     Para gráfica: imprimir em PDF sem margens; sangria não incluída (fundo branco). */
+  @page{size:90mm 50mm;margin:0}
+  :root{--ink:#2c2c2c;--ink-2:#5b5f5c;--ink-3:#8b908c;--sage:#87a392;--sage-700:#5f7d6b;--bg:#f3f5f3}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Outfit",system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--bg);
+       -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sheet{display:flex;flex-wrap:wrap;gap:10mm;padding:12mm;justify-content:center}
+  .card{width:90mm;height:50mm;background:#fff;position:relative;overflow:hidden;
+        box-shadow:0 1px 2px rgba(0,0,0,.06),0 6px 20px rgba(0,0,0,.06)}
+  .mark{display:block}
+  .mark .a{fill:var(--sage)} .mark .b{fill:var(--ink)}
+
+  /* frente */
+  .front{display:flex;align-items:center;justify-content:center}
+  .front .logo{display:flex;align-items:center;gap:2.2mm}
+  .front .mark{height:9mm;width:auto}
+  .front .word{font-size:29pt;font-weight:300;letter-spacing:-.01em;line-height:1;margin-top:-.6mm}
+  .front .tag{position:absolute;left:0;right:0;bottom:6mm;text-align:center;
+              font-size:5.6pt;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);font-weight:400}
+
+  /* verso */
+  .back{padding:7mm 7.5mm}
+  .back .mark{position:absolute;top:7mm;right:7.5mm;height:4.2mm;width:auto}
+  .back .name{font-size:13pt;font-weight:300;letter-spacing:-.005em;line-height:1.1}
+  .back .role{font-size:6.6pt;color:var(--ink-2);margin-top:1.4mm;letter-spacing:.01em}
+  .back .cau{font-size:5.6pt;color:var(--ink-3);letter-spacing:.12em;text-transform:uppercase;margin-top:.8mm;font-weight:400}
+  .back .contact{position:absolute;left:7.5mm;right:7.5mm;bottom:6.5mm;font-size:6.6pt;line-height:1.75;color:var(--ink)}
+  .back .contact span{display:block}
+  .back .contact .site{color:var(--sage-700);font-weight:400}
+  .back .rule{position:absolute;left:7.5mm;width:6mm;bottom:20.5mm;border-top:.25mm solid var(--sage)}
+
+  @media print{
+    body{background:#fff}
+    .sheet{display:block;padding:0}
+    .card{box-shadow:none;page-break-after:always;break-after:page}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="m" viewBox="0 0 50 56">
+    <path fill="#87a392" d="M0 0 A27 28 0 0 1 0 56 Z"/>
+    <path fill="#2c2c2c" d="M44 0 A23 28 0 0 0 44 56 Z"/>
+  </symbol>
+</svg>
+
+<div class="sheet">
+
+  <!-- Pitanga · frente -->
+  <section class="card front">
+    <div class="logo"><svg class="mark" viewBox="0 0 50 56"><use href="#m"/></svg><span class="word">brd</span></div>
+    <span class="tag">Design computacional</span>
+  </section>
+  <!-- Pitanga · verso -->
+  <section class="card back">
+    <svg class="mark" viewBox="0 0 50 56"><use href="#m"/></svg>
+    <p class="name">Pitanga Vigand</p>
+    <p class="role">Arquiteta · Co-fundadora</p>
+    <p class="cau">CAU A292912-0</p>
+    <span class="rule"></span>
+    <p class="contact">
+      <span>+55 21 99526-6007</span>
+      <span>brsdraft.adm@gmail.com</span>
+      <span class="site">brdraft.github.io</span>
+    </p>
+  </section>
+
+  <!-- Thiers · frente -->
+  <section class="card front">
+    <div class="logo"><svg class="mark" viewBox="0 0 50 56"><use href="#m"/></svg><span class="word">brd</span></div>
+    <span class="tag">Design computacional</span>
+  </section>
+  <!-- Thiers · verso -->
+  <section class="card back">
+    <svg class="mark" viewBox="0 0 50 56"><use href="#m"/></svg>
+    <p class="name">Thiers Nobrega</p>
+    <p class="role">Arquiteto · Co-fundador</p>
+    <p class="cau">CAU A334933-0</p>
+    <span class="rule"></span>
+    <p class="contact">
+      <span>+55 21 99526-6007</span>
+      <span>brsdraft.adm@gmail.com</span>
+      <span class="site">brdraft.github.io</span>
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
